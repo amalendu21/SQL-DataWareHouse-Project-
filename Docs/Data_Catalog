@@ -1,1 +1,67 @@
+Data Catalog for dw_Gold Layer
+Overview
 
+The dw_Gold layer represents the business-ready analytical layer of the data warehouse. It is designed using a star schema and contains:
+
+Dimension tables → descriptive attributes
+
+Fact tables → transactional metrics
+
+This layer is optimized for reporting, dashboards, and KPI analysis.
+
+## dw_Gold.dim_customer
+
+**Purpose:** Stores enriched customer data including demographic and geographic attributes.
+
+--------------------------------------------------------------------------------------------
+| Column Name      | Data Type   | Description                                             |
+|------------------|-------------|---------------------------------------------------------|
+| Customer_Key     | BIGINT      | Surrogate key uniquely identifying each customer record |
+| Customer_Id      | INT         | Unique identifier assigned to the customer              |
+| Customer_Number  | VARCHAR(50) | Alphanumeric identifier used for tracking customers     |
+| First_Name       | VARCHAR(50) | Customer's first name                                   |
+| Last_Name        | VARCHAR(50) | Customer's last name                                    |
+| Country          | VARCHAR(50) | Country of residence                                    |
+| Marital_Status   | VARCHAR(50) | Marital status (e.g., Married, Single)                  |
+| Birthday         | DATE        | Customer's date of birth                                |
+| Gender           | VARCHAR(50) | Gender of the customer                                  |
+| Created_Date     | DATE        | Record creation date                                    |
+--------------------------------------------------------------------------------------------
+
+## dw_Gold.dim_product
+
+**Purpose:** Contains product-level details and classifications.
+
+-----------------------------------------------------------------------------------
+| Column Name     | Data Type   | Description                                     |
+|-----------------|-------------|-------------------------------------------------|
+| Product_Key     | BIGINT      | Surrogate key uniquely identifying each product |
+| Product_Id      | INT         | Internal product identifier                     |
+| Product_number  | VARCHAR(50) | Alphanumeric product code                       |
+| Product_Name    | VARCHAR(50) | Name of the product                             |
+| Category_Id     | VARCHAR(50) | Identifier for product category                 |
+| Category        | VARCHAR(50) | High-level product category                     |
+| Subcategory     | VARCHAR(50) | Detailed product classification                 |
+| Maintenance     | VARCHAR(50) | Indicates if maintenance is required (Yes/No)   |
+| Cost            | INT         | Base cost of the product                        |
+| Product_Line    | VARCHAR(50) | Product line (e.g., Road, Mountain)             |
+| Start_Date      | DATE        | Product availability start date                 |
+-----------------------------------------------------------------------------------
+
+
+## dw_Gold.fact_sales
+
+**Purpose:** Stores transactional sales data for analytics.
+---------------------------------------------------------------------
+| Column Name    | Data Type  | Description                         |
+|----------------|------------|-------------------------------------|
+| Order_Number   | VARCHAR(50)| Unique identifier for each order    |
+| Product_Key    | BIGINT     | Foreign key linking to dim_product  |
+| Customer_Key   | BIGINT     | Foreign key linking to dim_customer |
+| Order_Date     | DATE       | Date when the order was placed      |
+| Shipping_Date  | DATE       | Date when the order was shipped     |
+| Due_Date       | DATE       | Payment due date                    |
+| Sales_Amount   | INT        | Total sales value                   |
+| Quantity       | INT        | Number of units ordered             |
+| Price          | INT        | Price per unit                      |
+---------------------------------------------------------------------
