@@ -5,6 +5,10 @@ Welcome to the Data Warehouse and Analytics Project repository! 🚀 This projec
 ### 💡 The Problem & Business Impact
 Before this implementation, the organization faced significant bottlenecks due to siloed data sources, inconsistent formatting, and manual data extraction processes from customer environments. This lack of a centralized, structured pipeline led to delayed reporting, data quality issues, and an inability to perform reliable historical analysis. This project successfully addresses these challenges by establishing an automated ELT pipeline that ingests data seamlessly, enforces rigorous cleaning standards through multi-layer processing (Bronze to Gold), and implements strict data governance. By converting raw data into optimized analytical views, it reduces manual effort, eliminates data duplication, and equips stakeholders with accurate, real-time insights for strategic decision-making.
 
+### 📄 Project Documentation
+For a deep dive into the complete architecture, data models, and detailed technical specifications, please refer to the full project documentation:
+* 📁 **[Download Full Project PDF](https://drive.google.com/file/d/1OYMzYESXr2WU-CbLHGV8sPUV2l1gm8Ex/view?usp=sharing)**
+
 ---
 
 ### 📡 **Phase I: Data Ingestion & Collection**
