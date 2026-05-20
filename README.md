@@ -3,7 +3,12 @@
 Welcome to the Data Warehouse and Analytics Project repository! 🚀 This project showcases a complete data warehousing and analytics workflow, covering everything from constructing the data warehouse to deriving meaningful insights. These were divided into multiple phases, from pulling the dataset from the customer environment to sending final reports to stakeholders.
 
 ### 💡 The Problem & Business Impact
-Before this implementation, the organization faced significant bottlenecks due to siloed data sources, inconsistent formatting, and manual data extraction processes from customer environments. This lack of a centralized, structured pipeline led to delayed reporting, data quality issues, and an inability to perform reliable historical analysis. This project successfully addresses these challenges by establishing an automated ELT pipeline that ingests data seamlessly, enforces rigorous cleaning standards through multi-layer processing (Bronze to Gold), and implements strict data governance. By converting raw data into optimized analytical views, it reduces manual effort, eliminates data duplication, and equips stakeholders with accurate, real-time insights for strategic decision-making.
+
+* **Data Silos & Inconsistency:** The organization faced significant operational bottlenecks caused by disjointed data sources and inconsistent formatting across departments.
+* **Manual Bottlenecks:** Data extraction from customer environments was heavily manual, leading to frequent delays in report generation.
+* **Compromised Quality:** A lack of standardized preprocessing resulted in poor data quality and made reliable, long-term historical analysis impossible.
+* **The Solution:** This project addresses these challenges by establishing an automated ELT pipeline that seamlessly ingests data and enforces rigorous validation across multi-layer processing (Bronze to Gold).
+* **Business Value:** By converting raw data into optimized, secure analytical views, the pipeline eliminates data duplication, reduces manual efforts, and equips stakeholders with accurate, real-time insights for strategic decision-making.
 
 ### 📄 Project Documentation
 For a deep dive into the complete architecture, data models, and detailed technical specifications, please refer to the full project documentation:
